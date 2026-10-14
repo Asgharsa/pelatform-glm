@@ -1,0 +1,156 @@
+/* ============================================================
+   نوا — توکن‌های طراحی (تم روشن و تیره)
+   پالت: بنفش سفارشی «نوا»، سرمه‌ای بنفش‌فام، سفید، خاکستری روشن
+   رنگ‌های تأکیدی ابزارها معنایی‌اند و فقط برای تفکیک ابزار به‌کار می‌روند.
+   ============================================================ */
+
+:root {
+  /* ---- تایپوگرافی ---- */
+  --font-sans: 'Vazirmatn', 'Segoe UI', Tahoma, Arial, sans-serif;
+  --font-mono: 'Cascadia Mono', 'Consolas', ui-monospace, monospace;
+
+  --fs-caption: 12px;
+  --fs-small: 13px;
+  --fs-body: 15px;
+  --fs-md: 16px;
+  --fs-lg: 18px;
+  --fs-xl: 20px;
+  --fs-2xl: 24px;
+  --fs-3xl: 30px;
+
+  --lh-tight: 1.25;
+  --lh-body: 1.65;
+
+  /* ---- هندسه ---- */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 20px;
+  --r-full: 999px;
+
+  --sidebar-w: 264px;
+  --topbar-h: 60px;
+  --content-max: 1240px;
+
+  --tr-fast: 140ms cubic-bezier(.3, .7, .4, 1);
+  --tr-mid: 220ms cubic-bezier(.3, .7, .4, 1);
+
+  /* ---- رنگ‌های معنایی — تم روشن ---- */
+  --bg: #f4f3fa;
+  --surface: #ffffff;
+  --surface-2: #f8f7fd;
+  --surface-3: #efedf8;
+  --fg: #211c35;
+  --fg-muted: #5d5878;
+  --fg-faint: #8b86a4;
+  --border: #e6e3f1;
+  --border-strong: #d3cfe4;
+
+  --primary: #6c42d8;          /* بنفش سفارشی نوا */
+  --primary-strong: #5a2ec2;   /* هاور / فشردن */
+  --primary-deep: #48209c;
+  --primary-soft: #ede7fb;
+  --primary-soft-2: #e0d5f7;
+  --on-primary: #ffffff;
+
+  --navy: #221d40;             /* سرمه‌ای بنفش‌فام — منوی کناری */
+  --navy-2: #2c2552;
+  --navy-line: rgba(255, 255, 255, .08);
+  --on-navy: #eceaf8;
+  --on-navy-muted: #a9a3ca;
+  --on-navy-faint: #7d77a0;
+
+  --success: #1a7f52;
+  --success-soft: #e2f3ea;
+  --warn: #93610e;
+  --warn-soft: #fbf0d9;
+  --danger: #bd3a48;
+  --danger-soft: #fbe8ea;
+  --info: #2a62c9;
+  --info-soft: #e7eefb;
+
+  /* ---- رنگ تأکیدی ابزارها (معنایی — برای تفکیک ابزار) ---- */
+  --acc-article: #2e62d9;
+  --acc-article-soft: #e7eefb;
+  --acc-photo: #c93d75;
+  --acc-photo-soft: #fbe7f0;
+  --acc-video: #96660c;
+  --acc-video-soft: #faf0d8;
+  --acc-text: #0d7c72;
+  --acc-text-soft: #e0f3f0;
+  --acc-chat: #1a7d5f;
+  --acc-chat-soft: #e2f3ec;
+  --acc-brand: #8a3ab0;
+  --acc-brand-soft: #f4e8fb;
+
+  --shadow-sm: 0 1px 2px rgba(33, 28, 53, .06);
+  --shadow-md: 0 2px 6px rgba(33, 28, 53, .05), 0 10px 28px rgba(33, 28, 53, .09);
+  --shadow-lg: 0 8px 18px rgba(33, 28, 53, .08), 0 24px 60px rgba(33, 28, 53, .16);
+
+  --focus-ring: 0 0 0 3px rgba(108, 66, 216, .28);
+
+  --code-bg: #f2f0fa;
+  --code-fg: #3a3358;
+
+  color-scheme: light;
+}
+
+/* ---- تم تیره ---- */
+[data-theme="dark"] {
+  --bg: #12101f;
+  --surface: #1a1730;
+  --surface-2: #221e3c;
+  --surface-3: #2b2551;
+  --fg: #eceaf6;
+  --fg-muted: #a8a3c5;
+  --fg-faint: #7d779e;
+  --border: #2b2650;
+  --border-strong: #3b3468;
+
+  --primary: #a089f2;
+  --primary-strong: #b3a0f6;
+  --primary-deep: #8a72ea;
+  --primary-soft: #2a2154;
+  --primary-soft-2: #352a66;
+  --on-primary: #160f2e;
+
+  --navy: #15122a;
+  --navy-2: #1e1a3a;
+  --navy-line: rgba(255, 255, 255, .07);
+  --on-navy: #e9e6f6;
+  --on-navy-muted: #a19bc0;
+  --on-navy-faint: #726c94;
+
+  --success: #4ecb92;
+  --success-soft: #12352a;
+  --warn: #e8b95c;
+  --warn-soft: #3a2f14;
+  --danger: #f08a96;
+  --danger-soft: #42222b;
+  --info: #7dabf0;
+  --info-soft: #1c2a4a;
+
+  --acc-article: #7dabf0;
+  --acc-article-soft: #1c2a4a;
+  --acc-photo: #f08bb3;
+  --acc-photo-soft: #402233;
+  --acc-video: #e8c07a;
+  --acc-video-soft: #3d3116;
+  --acc-text: #5ecfc2;
+  --acc-text-soft: #123733;
+  --acc-chat: #63cf9f;
+  --acc-chat-soft: #123529;
+  --acc-brand: #cf9aec;
+  --acc-brand-soft: #362152;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .35);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, .3), 0 12px 32px rgba(0, 0, 0, .45);
+  --shadow-lg: 0 10px 22px rgba(0, 0, 0, .35), 0 30px 70px rgba(0, 0, 0, .55);
+
+  --focus-ring: 0 0 0 3px rgba(160, 137, 242, .38);
+
+  --code-bg: #14112a;
+  --code-fg: #cfc9ea;
+
+  color-scheme: dark;
+}
